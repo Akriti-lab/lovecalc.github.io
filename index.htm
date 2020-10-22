@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">s
+	<title>Love Calculator</title>
+	<style type="text/css">
+		.parent{
+			display: flex;
+			justify-content: space-between;
+             width: 500px;
+             height: 100px;
+          
+             margin: auto;
+             margin-top: 15px;
+		}
+		
+		body{
+			background-image:url(love1.jpg);
+		}
+		input{
+			text-align: center;
+			outline: none;
+			border: none;
+		}
+		button{
+			outline: none;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="grandparent" style="height: 350px;width: 600px;margin: auto;margin-top: 50px;border-style: solid; border-color: #cc0000; border-radius: 20px;">
+		<div style="padding-left: 220px;background-color: red;border-radius: 20px; height: 35px;padding-top: 8px;text-decoration-style: bold;">LOVE CALCULATOR</div>
+	<div class="parent">
+		<div style="margin-top: 20px;margin-left: 30px; height: 300px;">
+			<input type="" name="" id="name"  placeholder="Your Name"  style="height: 30px; width: 180px;border-radius: 20px;">
+		</div>
+		<div style="margin-top: 20px;">
+			<script type="text/javascript">
+				document.write("+");
+			</script>
+			
+		</div>
+		<div style="margin-top: 20px; margin-right: 30px;">
+			<input type="" name="" id="lname" placeholder="Crush Name"   style="height: 30px;width: 180px;border-radius: 20px;">
+		</div>
+		
+	</div>
+	<div >
+		<button style="background-color: rgb(128, 0, 0,0.2);margin-left: 180px;width: 250px;height: 40px;border-radius: 10px;" onclick="myfun()">Calculate</button></div>
+		<div>
+			<input type="text" id="ans" placeholder="Love Percentage" name=""    style="background-color: white;margin-left: 210px;width:150px;height: 30px;border-radius: 10px;margin-top: 20px;">
+		</div>
+		<div style="margin-left:210px;margin-top: 40px; ">God Bless Your Relationship</div>
+	</div>
+	<script type="text/javascript">
+		function myfun(){
+			var name=document.getElementById('name').value;
+			var lname=document.getElementById('lname').value;
+			if(name=="")
+			{
+				alert("Enter your name");
+			}else if(!isNaN(name)){
+				alert("Numbers are not allowed");
+
+			}else if(name.length<3)
+			{
+				alert("Min. length is 3");
+			}
+			else if(lname==" ")
+			{
+				alert("Enter your crush name");
+			}else if(!isNaN(lname)){
+				alert("Numbers are not allowed");
+
+			}else if(lname.length<3)
+			{
+				alert("Min. length is 3");
+			}
+			else{
+				var lovedata=Math.random()*100;
+				var lovedata1=Math.floor(lovedata);
+				document.getElementById('ans').value=lovedata1+"%";
+			}
+
+			
+		}
+	</script>
+
+
+	
+
+</body>
+</html>
